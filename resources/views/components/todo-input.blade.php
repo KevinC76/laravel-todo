@@ -1,12 +1,11 @@
-<div class="flex justify-center items-center w-full mt-4">
-    <div class="w-full max-w-md px-4">
-        <div class="my-8">
-            <div
-                class="flex items-center rounded-md bg-white pl-3 outline-2 -outline-offset-1 outline-gray-500 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
-                <input type="text" name="todo" id="todo"
-                    class="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6"
-                    placeholder="todo">
-            </div>
-        </div>
-    </div>
+<div class="mt-6 flex max-w-md gap-x-4 my-8">
+    <form action="/" method="POST">
+        @csrf
+        <label for="todo" class="sr-only">Task</label>
+        <input id="email-gray-500 address" name="todo" type="text" autocomplete='false' required
+        class="outline-min-w-0 flex-auto rounded-md bg-white px-3.5 py-2 text-base text-black -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-gray-400 sm:text-sm/6"
+        placeholder="Enter your task">
+        <button type="submit"
+        class="flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-400">Add Task</button>
+    </form>
 </div>

@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\Request;
 use Illuminate\View\Component;
 
 class todo extends Component

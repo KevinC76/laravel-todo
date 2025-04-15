@@ -11,27 +11,12 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="bg-gradient-to-br from-indigo-500 via-violet-400 to-fuchsia-300 min-h-screen w-full">
     <div class="flex flex-col items-center justify-center py-16 px-8">
-        <h1 class="font-bold text-4xl text-indigo-600">Track your task here</h1>
+        <h1 class="font-bold text-4xl text-white">Track your task here</h1>
         <x-todo-input></x-todo-input>
-        <div class="grid grid-cols-3 gap-16">
-            @for ($i = 0; $i < 10; $i++)
-            <div class="w-[300px] h-[300px] bg-indigo-400  px-2 py-2 rounded-md">
-                <div class="flex flex-col items-start justify-between h-full">
-                    <h1 class="text-lg">Lorem ipsum dolor sit amet.</h1>
-
-                    <a href="#"
-                        class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs
-                        hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white w-full text-center">Mark
-                        as done</a>
-
-                </div>
-
-            </div>
-
-            @endfor
-        </div>
+        <p class="my-4 text-white">{{ session('success') }}</p>
+        {{ $slot }}
     </div>
 </body>
 
