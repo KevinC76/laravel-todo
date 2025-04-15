@@ -24,7 +24,7 @@ class TodoController extends Controller
 
         $todo->save();
 
-        return redirect('/')->with('success', 'Task Added!');
+        return redirect('/todos')->with('success', 'Task Added!');
     }
 
     public function update($id)
@@ -34,6 +34,6 @@ class TodoController extends Controller
             'status' => true
         ]);
 
-        return redirect('/')->with('success', 'Task marked as done!');
+        return redirect('/todos')->with('success', 'Task marked as done!');
     }
 }
